@@ -1,0 +1,18 @@
+[[permission]]
+identifier = "allow-editor-commands"
+description = "栞のメインウィンドウで使う文書、画像、エクスポート操作"
+commands.allow = [
+    "startup_document",
+    "new_document",
+    "open_document",
+    "choose_save_path",
+    "cancel_save_path",
+    "save_document",
+    "read_image",
+    "rebase_image",
+    "approve_image_folder",
+    "choose_image",
+    "open_link",
+    "export_html",
+    "export_pdf",
+]

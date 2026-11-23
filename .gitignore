@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.dev/
+.frontend-*/
+.frontend-publish.lock
+.build-tools/
+src-tauri/target/
+tools/frontend-fs/target/
+tools/frontend-embed/target/
+src-tauri/gen/
+release/

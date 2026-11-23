@@ -1,0 +1,9 @@
+{
+  "mainBinaryName": "shiori-mde-portable",
+  "app": {
+    "appDirectoriesOverride": "./app-data"
+  },
+  "bundle": {
+    "active": false
+  }
+}

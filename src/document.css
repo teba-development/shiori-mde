@@ -1,0 +1,138 @@
+.document-content {
+  color: #25312c;
+  font: 15px/1.85 "Segoe UI", "Yu Gothic UI", Meiryo, sans-serif;
+  overflow-wrap: anywhere;
+}
+
+.document-content > :first-child { margin-top: 0; }
+.document-content > :last-child { margin-bottom: 0; }
+.document-content p { margin: .85em 0; }
+.document-content :is(h1, h2, h3, h4, h5, h6) {
+  color: #17372c;
+  line-height: 1.45;
+  margin: 1.45em 0 .6em;
+  font-weight: 700;
+  break-after: avoid;
+}
+.document-content h1 { font-size: 2em; letter-spacing: -.025em; }
+.document-content h2 { font-size: 1.52em; border-bottom: 1px solid #dce4dc; padding-bottom: .34em; }
+.document-content h3 { font-size: 1.2em; }
+.document-content h4 { font-size: 1.06em; }
+.document-content :is(h5, h6) { font-size: 1em; }
+.document-content h6 { color: #66756c; }
+.document-content a { color: #216349; text-underline-offset: .18em; }
+.document-content ul, .document-content ol { padding-left: 1.65em; }
+.document-content li + li { margin-top: .18em; }
+.document-content li > p:first-child { margin-top: 0; }
+.document-content li > p:last-child { margin-bottom: 0; }
+.document-content blockquote {
+  border-left: 3px solid #9bb5a6;
+  color: #4d6256;
+  margin: 1.25em 0;
+  padding: .05em 1em;
+  background: #f2f6f1;
+}
+.document-content hr { border: 0; border-top: 1px solid #dce4dc; margin: 1.8em 0; }
+.document-content :is(img, svg) { max-width: 100%; height: auto; vertical-align: middle; }
+.document-content img { object-fit: contain; }
+.document-content img.image-unavailable {
+  min-width: 1.8em;
+  min-height: 1.6em;
+  padding: .16em .45em;
+  border: 1px dashed #c2ac99;
+  color: #775845;
+  font-size: .88em;
+}
+.document-content table {
+  border-collapse: collapse;
+  font-size: .94em;
+  margin: 1em 0;
+  max-width: 100%;
+}
+.document-content :is(th, td) { border: 1px solid #dce4dc; padding: .35em .75em; min-width: 40px; }
+.document-content th { background: #edf3ed; text-align: left; }
+.document-content thead { display: table-header-group; }
+.document-content tr { break-inside: avoid; }
+.document-content input[type=checkbox] { accent-color: #326b55; margin: 0 .4em 0 0; }
+.document-content .task-list-item { list-style: none; }
+.document-content code {
+  font-family: "Cascadia Mono", Consolas, "Yu Gothic UI", monospace;
+  font-size: .89em;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" off, "calt" off;
+}
+.document-content :not(pre) > code { background: #edf2ed; color: #215a44; padding: .12em .35em; border-radius: 4px; }
+.document-content pre {
+  background: #f1f4f0;
+  border: 1px solid #e0e7df;
+  color: #243a2f;
+  line-height: 1.65;
+  padding: .9em 1em;
+  border-radius: 7px;
+  overflow: auto;
+  tab-size: 4;
+}
+.document-content pre code { color: inherit; background: none; padding: 0; }
+.document-content pre .tok-keyword { color: #8950a3; }
+.document-content pre :is(.tok-atom, .tok-bool, .tok-number, .tok-literal) { color: #9a4f15; }
+.document-content pre :is(.tok-string, .tok-string2, .tok-url, .tok-inserted) { color: #236b40; }
+.document-content pre :is(.tok-typeName, .tok-className, .tok-namespace) { color: #965327; }
+.document-content pre :is(.tok-variableName2, .tok-macroName, .tok-definition) { color: #245c95; }
+.document-content pre :is(.tok-propertyName, .tok-labelName) { color: #235f7a; }
+.document-content pre .tok-comment { color: #667764; font-style: italic; }
+.document-content pre :is(.tok-meta, .tok-operator) { color: #705137; }
+.document-content pre :is(.tok-invalid, .tok-deleted) { color: #a63636; }
+.document-content pre .tok-strong { font-weight: 700; }
+.document-content pre .tok-emphasis { font-style: italic; }
+.document-content pre .tok-link { text-decoration: underline; }
+.document-content .code-frame { margin: 1.1em 0; border: 1px solid #dce4dc; border-radius: 8px; }
+.document-content .code-frame pre { margin: 0; border: 0; border-radius: 0 0 7px 7px; }
+.document-content .code-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8faf7;
+  color: #596b60;
+  padding: .23em .65em .23em .9em;
+  border-bottom: 1px solid #e0e7df;
+  border-radius: 8px 8px 0 0;
+  font: 600 .73em/1.6 "Segoe UI", "Yu Gothic UI", sans-serif;
+  letter-spacing: .04em;
+}
+.document-content .code-language {
+  max-width: min(100%, 240px);
+  color: #35584a;
+  background: #f8faf7;
+  border: 1px solid #cbd8cd;
+  border-radius: 5px;
+  padding: .2em 1.5em .2em .45em;
+  font: inherit;
+  letter-spacing: normal;
+  cursor: pointer;
+}
+.document-content .code-language:focus-visible { outline: 2px solid #6c967d; outline-offset: 2px; }
+.document-content .code-language:disabled { opacity: .6; cursor: default; }
+.document-content .code-copy {
+  color: #426357;
+  background: none;
+  border: 0;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 25px;
+  cursor: pointer;
+}
+.document-content .code-copy:hover { background: #e2ede4; }
+.document-content .code-copy svg { width: 14px; height: 14px; }
+.document-content .diagram-frame { break-inside: avoid; text-align: center; }
+.document-content .diagram-frame img { margin: .8em auto; }
+.document-content .diagram-frame pre { text-align: left; }
+.document-content .diagram-error { text-align: left; padding: 0 .9em; color: #903b27; font-size: .9em; }
+
+@media print {
+  .document-content { font-size: 11pt; color: #202724; }
+  .document-content pre { white-space: pre-wrap; overflow: visible; print-color-adjust: exact; }
+  .document-content .code-caption { display: none; }
+  .document-content :is(img, svg) { max-height: 230mm; break-inside: avoid; }
+}

@@ -1,0 +1,49 @@
+[package]
+name = "shiori-mde"
+version = "2.0.0"
+edition = "2021"
+description = "栞 Markdown Editor"
+
+[features]
+custom-protocol = ["tauri/custom-protocol", "tauri/compression", "dep:shiori-frontend-embed"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[target.'cfg(windows)'.build-dependencies]
+windows-sys = { version = "0.61", features = [
+  "Win32_Foundation", "Win32_Security", "Win32_Storage_FileSystem",
+] }
+
+[dependencies]
+base64 = "0.22"
+dunce = "1"
+path-clean = "1"
+pathdiff = "0.2"
+percent-encoding = "2"
+quick-xml = "0.42"
+serde = { version = "1", features = ["derive"] }
+shiori-frontend-embed = { path = "../tools/frontend-embed", optional = true }
+tauri = { version = "~2.12.0", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-opener = "2"
+tempfile = "3"
+tokio = { version = "1", features = ["sync", "time"] }
+
+[target.'cfg(windows)'.dependencies]
+getrandom = "0.4"
+serde_json = "1"
+sha2 = "0.10"
+webview2-com = "0.39"
+windows = { version = "0.62", features = ["Win32_System_Com"] }
+windows-core = "0.62"
+windows-sys = { version = "0.61", features = [
+  "Wdk_Foundation",
+  "Wdk_Storage_FileSystem",
+  "Win32_Foundation",
+  "Win32_Security",
+  "Win32_Security_Authorization",
+  "Win32_Storage_FileSystem",
+  "Win32_System_IO",
+  "Win32_System_SystemServices",
+] }

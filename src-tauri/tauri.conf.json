@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "栞",
+  "mainBinaryName": "shiori-mde",
+  "version": "2.0.0",
+  "identifier": "jp.shiori.mde",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "node tools/package-windows.mjs",
+    "devUrl": "http://127.0.0.1:1420"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "create": false,
+        "title": "栞",
+        "width": 1300,
+        "height": 840,
+        "minWidth": 740,
+        "minHeight": 520,
+        "dragDropEnabled": false
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' ipc: http://ipc.localhost; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": ["icons/icon.ico", "icons/icon.png"],
+    "shortDescription": "Markdownエディタ",
+    "windows": {
+      "nsis": {
+        "languages": ["Japanese", "English"],
+        "installerHooks": "windows/file-association.nsh"
+      }
+    }
+  }
+}

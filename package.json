@@ -1,0 +1,46 @@
+{
+  "name": "shiori-mde",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node tools/frontend.mjs --serve",
+    "check": "tsc --noEmit",
+    "test:frontend": "node --test tools/frontend-io.test.mjs",
+    "build": "npm run check && node tools/frontend.mjs",
+    "tauri": "tauri",
+    "build:x64": "npm run check && node tools/package-windows.mjs x64 setup",
+    "build:arm64": "npm run check && node tools/package-windows.mjs arm64 setup",
+    "build:portable:x64": "npm run check && node tools/package-windows.mjs x64 portable",
+    "build:portable:arm64": "npm run check && node tools/package-windows.mjs arm64 portable",
+    "package:store": "node tools/package-store.mjs"
+  },
+  "dependencies": {
+    "@codemirror/commands": "^6.11.1",
+    "@codemirror/lang-markdown": "^6.5.2",
+    "@codemirror/language": "^6.13.1",
+    "@codemirror/language-data": "6.5.2",
+    "@codemirror/state": "^6.7.6",
+    "@codemirror/view": "^6.43.15",
+    "@lezer/highlight": "1.2.5",
+    "@milkdown/kit": "^7.23.0",
+    "@tauri-apps/api": "^2.12.4",
+    "@types/hast": "^3.0.5",
+    "@types/mdast": "^4.0.4",
+    "dompurify": "^3.4.17",
+    "hast-util-to-html": "^9.0.6",
+    "lucide": "^1.71.0",
+    "mermaid": "^12.3.0",
+    "parse5": "^8.1.1",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "unified": "^11.0.5"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.4",
+    "esbuild": "0.28.2",
+    "typescript": "^7.0.2"
+  }
+}
